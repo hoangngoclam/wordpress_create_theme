@@ -1,0 +1,10 @@
+FROM wordpress:latest
+
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* \
+    && curl -sL https://deb.nodesource.com/setup_18.x | bash - \
+    && apt-get install -y nodejs \
+    && curl -L https://www.npmjs.com/install.sh | sh
+
+WORKDIR /var/www/html
+RUN npm install -g yarn
+RUN npm install -g tailwindcss
