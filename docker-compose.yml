@@ -6,10 +6,10 @@ services:
       context: ./.docker/wordpress
       dockerfile: DockerFile
     ports:
-      - 80:80 # change ip if required
+      - 80:80
     volumes:
       - ./.docker/php/php.conf.ini:/usr/local/etc/php/conf.d/conf.ini
-      - ./wp-app:/var/www/html # Full wordpress project
+      - ./wp-app:/var/www/html
     environment:
       WORDPRESS_DB_HOST: db
       WORDPRESS_DB_NAME: "${DB_NAME}"
