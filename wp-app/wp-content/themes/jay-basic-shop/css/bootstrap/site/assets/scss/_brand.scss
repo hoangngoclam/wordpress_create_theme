@@ -4,24 +4,24 @@
 
 // Logo series wrapper
 .bd-brand-logos {
-  color: $bd-violet;
+  color: $bd-purple-bright;
 
   .inverse {
     color: $white;
-    background-color: $bd-violet;
+    background-color: $bd-purple-bright;
   }
 }
 
 // Individual items
 .bd-brand-item {
   + .bd-brand-item {
-    border-top: 1px solid var(--bs-border-color);
+    border-top: 1px solid $white;
   }
 
   @include media-breakpoint-up(md) {
     + .bd-brand-item {
       border-top: 0;
-      border-left: 1px solid var(--bs-border-color);
+      border-left: 1px solid $white;
     }
   }
 }
