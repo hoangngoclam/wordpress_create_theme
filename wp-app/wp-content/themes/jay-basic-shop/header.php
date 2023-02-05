@@ -92,15 +92,27 @@
 
 			</div>
 
-			<nav id="site-navigation" class="main-navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'jay-basic-shop'); ?></button>
-				<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'menu-1',
-						'menu_id'        => 'primary-menu',
-					)
-				);
-				?>
-			</nav><!-- #site-navigation -->
+			<nav id="site-navigation" class="main-navigation bg-primary">
+				<div class="container d-flex justify-content-center">
+					<div class="row">
+						<div class="col-12 d-flex justify-content-center">
+							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+								<i class="bi bi-list"></i>
+								<?php esc_html_e('Primary Menu', 'pawsgang'); ?>
+							</button>
+						</div>
+
+						<div class="col-12 text-center">
+							<?php
+							wp_nav_menu(
+								array(
+									'theme_location' => 'menu-1',
+									'menu_id'        => 'primary-menu'
+								)
+							);
+							?>
+						</div>
+					</div>
+				</div>
+			</nav>
 		</header><!-- #masthead -->
